@@ -4,7 +4,7 @@ from Sales x
 join 
     (select product_id, min(year) as first 
      from Sales
-     group by product_id) y
+     group by 1) y
 on x.product_id=y.product_id and x.year=y.first
 
 join 
