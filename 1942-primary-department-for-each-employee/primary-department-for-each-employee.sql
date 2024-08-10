@@ -7,4 +7,4 @@ UNION
 select employee_id,max(department_id)
 from Employee
 group by employee_id
-having count(department_id)=1
+HAVING COUNT(department_id)=1
