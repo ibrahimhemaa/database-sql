@@ -6,4 +6,4 @@ SELECT
         where p.product_id=p1.product_id and p1.change_date<='2019-08-16'
         order by p1.change_date desc ),10
     ) as price
-from (select distinct product_id from Products) as p;
+FROM (select Distinct product_id from Products) as p;
