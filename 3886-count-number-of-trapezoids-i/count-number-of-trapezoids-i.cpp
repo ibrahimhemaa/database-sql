@@ -8,12 +8,11 @@ public:
             mp[p[1]] += 1;
         }
         long long sum = 0;
-        long long ans = 0;
+        int ans = 0;
         for(auto [y, Cy] : mp){
             long long Vy = (long long)Cy * (Cy - 1) / 2;
 
-            ans += sum * Vy;
-            ans %= mod;
+            ans = ((ans+(sum * Vy))%mod);
 
             sum += Vy;
             sum %= mod;
